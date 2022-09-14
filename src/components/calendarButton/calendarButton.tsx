@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from './CalendarButton.module.scss'
+import React from 'react';
+import styles from './calendarButton.module.scss';
 type CalendarButtonProps = {
 
 }

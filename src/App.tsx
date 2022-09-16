@@ -1,7 +1,5 @@
 import React from 'react'
-
 import styles from './app.module.scss';
-
 import CalendarButton from './components/calendarButton/calendarButton';
 
 type AppProps = {
@@ -10,7 +8,7 @@ type AppProps = {
 
 const App: React.FC<AppProps> = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.button}>
       <CalendarButton />
     </div>
   )

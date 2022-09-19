@@ -2,16 +2,23 @@ import React from 'react'
 import styles from './tuntiInfo.module.scss'
 
 type TuntiInfoProps = {
-    infoText: string
-    onVapaa?: boolean
+  infoText?: string
+  startTime?: number
+  endTime?: number
 }
 
-const TuntiInfo: React.FC<TuntiInfoProps> = ({infoText, onVapaa=false}) => {
+const TuntiInfo: React.FC<TuntiInfoProps> = ({ infoText = "vapaa", startTime, endTime }) => {
+  const onVapaa = startTime === undefined && endTime === undefined
   return (
     <div className={`${styles.container} ${onVapaa ? styles.isGreen : styles.isRed}`}>
-        {
-            infoText
-        }
+      {
+        startTime && endTime
+          ? (
+            <div>{new Date(startTime).toLocaleTimeString()} - {new Date(endTime).toLocaleTimeString()}</div>
+          )
+          : null
+      }
+      <div>{infoText}</div>
     </div>
   )
 }

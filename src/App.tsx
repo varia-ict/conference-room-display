@@ -8,8 +8,9 @@ type AppProps = {
 
 const App: React.FC<AppProps> = () => {
   return (
-    <div className={styles.button}>
-      <CalendarButton />
+    <div className={styles.btn}>
+      <div/>
+      <CalendarButton startDate='2022-09-19' endDate='2022-09-23'></CalendarButton>
     </div>
   )
 }

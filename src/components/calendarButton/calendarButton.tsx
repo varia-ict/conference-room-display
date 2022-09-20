@@ -12,7 +12,7 @@ type CalendarButtonProps = {
 export function CalendarButton({ startDate, endDate }: CalendarButtonProps) {
   const navigate = useNavigate();
   return (
-    <button className={styles.btn} onClick={() => navigate("/calendar?startDate=" + startDate + "&endDate="+endDate)}>
+    <button className={styles.btn} /*onClick={() => navigate("/calendar?startDate=" + startDate + "&endDate="+endDate)}*/>
 
       <img className={styles.img}
         src={CalendarIcon}

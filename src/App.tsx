@@ -1,7 +1,14 @@
 import React from 'react'
-import DemoComponent from './components/demoComponent/demoComponent'
 import styles from './app.module.scss';
-import Demo2 from './components/demo2/demo2';
+import Calendar from './components/calendarButton/calendar';
+import Home from './components/calendarButton/home';
+import { 
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink, 
+  useSearchParams
+} from "react-router-dom";
 
 type AppProps = {
 
@@ -9,11 +16,25 @@ type AppProps = {
 
 const App: React.FC<AppProps> = () => {
   return (
-    <div className={styles.container}>
-      <DemoComponent />
-      <Demo2 />
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/calendar" element={<CalendarPage />} /> */}
+      </Routes>
+    </Router>
+  );
 }
 
+// function CalendarPage() {
+//   const [startDate, setStartDate] = useState(new Date());
+//   return (
+//     <DatePicker selected={startDate} onChange={(date: any) => setStartDate(date)} />
+//   );
+// }
+
+
+
 export default App
+function useState(arg0: Date): [any, any] {
+  throw new Error('Function not implemented.');
+}

@@ -3,7 +3,46 @@ body {
 }
 
 .container {
+  position: relative;
   width: 100vw;
   height: 100vh;
-  background: lightblue;
+  background-color: #12223E;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.content {
+  // width: 100vw;
+  // height: 100vh;
+  // background-image: url("./images/varialogo.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // width: 100vw;
+  // height: 100vh;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background img {
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+
+  @media screen and (max-width: 1110px) {
+    max-height: 100vh;
+    max-width: auto;
+  }
 }

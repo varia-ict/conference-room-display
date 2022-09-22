@@ -1,17 +1,18 @@
 import React from 'react'
-import DemoComponent from './components/demoComponent/demoComponent'
 import styles from './app.module.scss';
-import Demo2 from './components/demo2/demo2';
 
-type AppProps = {
-
-}
-
-const App: React.FC<AppProps> = () => {
+const App: React.FC = () => {
   return (
     <div className={styles.container}>
-      <DemoComponent />
-      <Demo2 />
+      <div className={styles.background}>
+      </div>
+      <div className={styles.content}>
+        <div className={styles.left}>
+          <div className={styles.top}></div>
+          <div className={styles.bottom}></div>
+        </div>
+        <div className={styles.right}></div>
+      </div>
     </div>
   )
 }

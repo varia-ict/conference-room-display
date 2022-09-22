@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./components/reservation/reservation.module.scss";
+import styles from "./reservation.module.scss";
 
 type ReservationProps = {
 status: boolean

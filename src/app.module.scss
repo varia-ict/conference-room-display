@@ -3,27 +3,20 @@ body {
 }
 
 .container {
-  position: relative;
+  // position: relative;
   width: 100vw;
   height: 100vh;
   background-color: #12223E;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 }
 
 .content {
-  // width: 100vw;
-  // height: 100vh;
-  // background-image: url("./images/varialogo.png");
-  // background-repeat: no-repeat;
-  // background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  // width: 100vw;
-  // height: 100vh;
+  flex-direction: row;
   position: relative;
+  height: 100vh;
+  width: 100vw;
 }
 
 .background {
@@ -34,15 +27,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background-image: url('./images/varialogo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.6;
 }
 
-.background img {
-  width: 100%;
-  height: auto;
-  max-width: 900px;
+.container .content .left {
+  height: 100%;
+  width: 50%;
+}
 
-  @media screen and (max-width: 1110px) {
-    max-height: 100vh;
-    max-width: auto;
-  }
+.container .content .right {
+  height: 100%;
+  width: 50%;
+}
+
+.container .content .left .top {
+  height: 50%;
+  width: 100%;
+}
+
+.container .content .left .bottom {
+  height: 50%;
+  width: 100%;
 }

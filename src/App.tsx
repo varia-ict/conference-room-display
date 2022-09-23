@@ -1,13 +1,14 @@
 import React from 'react'
-import styles from './app.module.scss';
+//import styles from './app.module.scss';
 import Calendar from './components/calendarButton/calendar';
 import Home from './components/calendarButton/home';
+
 import { 
   BrowserRouter as Router,
   Routes,
   Route,
-  NavLink, 
-  useSearchParams
+  //NavLink, 
+  //useSearchParams
 } from "react-router-dom";
 
 type AppProps = {
@@ -19,7 +20,7 @@ const App: React.FC<AppProps> = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/calendar" element={<CalendarPage />} /> */}
+        {/* <Route path="/calendar" element={<CalendarPage />} />*/ }
       </Routes>
     </Router>
   );
@@ -38,3 +39,5 @@ export default App
 function useState(arg0: Date): [any, any] {
   throw new Error('Function not implemented.');
 }
+
+

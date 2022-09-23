@@ -9,31 +9,21 @@ type HomeProps = {
 
 
 const Home: React.FC<HomeProps> = () => {
-    const [startDate, setStartDate] = useState(new Date());
-    const calendarRef = useRef<any>(null)
-
-    useEffect(() => {
-        if (!calendarRef.current) return;
-
-        const ref = calendarRef.current as HTMLDivElement;
-
-        ref.innerHTML = ''
-        
-
-    })
+    const [date, setDate] = useState(new Date());
+    const [displayCalendar, setDisplayCalendar] = useState(false);
 
     return (
-        <div >
-            <DatePicker
-                ref={calendarRef}
-                selected={startDate}
-                onChange={(date:Date) => setStartDate(date)}
-                customInput={<CalendarButton endDate='' startDate='' />}
-            />
-            {/* <CalendarButton startDate='2022-09-19' endDate='2022-09-23'></CalendarButton>
-            <CalendarButton startDate='2022-09-13' endDate='2023-09-23'></CalendarButton> */}
+        <div>
+            <div style={{ color: 'black', width: '50px', height: '50px', display: displayCalendar ? "block" : "" }}>
+                {date.toLocaleDateString()}
+            </div>
+            <div >
+                <CalendarButton onClick={() => setDisplayCalendar(!displayCalendar)} />
+            </div>
         </div>
     )
 }
 
 export default Home
+
+

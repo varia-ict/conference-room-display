@@ -4,15 +4,14 @@ import { useNavigate } from "react-router-dom";
 
 
 type CalendarButtonProps = {
-  startDate: string,
-  endDate: string
+  onClick?: () => void
 }
 
 //component recieves a start and end date and redirect to calendar component
-export function CalendarButton({ startDate, endDate }: CalendarButtonProps) {
+export function CalendarButton({ onClick }: CalendarButtonProps) {
   const navigate = useNavigate();
   return (
-    <button className={styles.btn} /*onClick={() => navigate("/calendar?startDate=" + startDate + "&endDate="+endDate)}*/>
+    <button className={styles.btn} onClick={onClick}>
 
       <img className={styles.img}
         src={CalendarIcon}

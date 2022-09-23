@@ -1,0 +1,12 @@
+Component is a button, after clicking on this button the calendar is appeared
+
+
+
+
+number
+string
+boolean
+date
+null
+undefined
+

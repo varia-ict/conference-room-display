@@ -1,19 +1,46 @@
 import React from "react"
-import Reservation from './components/Reservation/reservation';
+import Timeline from './components/Reservation/reservation';
+// import Bar from './components/Bar/bar';
+// import Circle from "./components/Circle/circle";
 import styles from './app.module.scss';
 
 
 type AppProps = {
-
+ 
 }
 
 const App: React.FC<AppProps> = () => {
   return (
-    <>
-     <Reservation time="10.00-12.00" status={true} /> 
-    </>
+   <>
+      
+      <>
+        <Timeline  /> 
+      </>
+      <>
+        <Timeline  /> 
+      </>
+      <>
+        <Timeline  /> 
+      </>
+      <>
+        <Timeline  /> 
+      </>
+      <>
+        <Timeline  /> 
+      </>
+      <>
+        <Timeline  /> 
+      </>
+      {/* <>
+        <Bar />
+      </>
+      <>
+        <Circle />
+      </> */}
+   </>
   )
 }
-//test
+
+
 
 export default App

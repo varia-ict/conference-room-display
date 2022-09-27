@@ -1,7 +1,7 @@
 import CalendarButton from './calendarButton';
-import DatePicker, { ReactDatePickerCustomHeaderProps } from 'react-datepicker';
+//import DatePicker, { ReactDatePickerCustomHeaderProps } from 'react-datepicker';
 
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
 
 type HomeProps = {
 
@@ -14,8 +14,8 @@ const Home: React.FC<HomeProps> = () => {
 
     return (
         <div>
-            <div style={{ color: 'black', width: '50px', height: '50px', display: displayCalendar ? "block" : "" }}>
-                {date.toLocaleDateString()}
+            <div style={{ color: 'black', width: '50px', height: '50px', display: displayCalendar ? "block" : "none" }}>
+                {date.toLocaleDateString()} Moha's calendar component
             </div>
             <div >
                 <CalendarButton onClick={() => setDisplayCalendar(!displayCalendar)} />

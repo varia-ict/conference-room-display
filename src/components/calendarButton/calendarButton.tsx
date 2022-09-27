@@ -4,8 +4,15 @@ import { useNavigate } from "react-router-dom";
 
 
 type CalendarButtonProps = {
+  // pageName: translations
   onClick?: () => void
 }
+// interface translations {
+//   english: string
+//   finnish: string
+// }
+
+
 
 //component recieves a start and end date and redirect to calendar component
 export function CalendarButton({ onClick }: CalendarButtonProps) {

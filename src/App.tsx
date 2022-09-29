@@ -1,12 +1,10 @@
 import React from 'react'
 import styles from './app.module.scss';
-import Home from './components/calendarButton/home';
+import CalendarScreen from './components/calendarButton/calendarScreen';
 
 
 
-type AppProps = {
 
-}
 
 const App: React.FC = () => {
   return (
@@ -17,7 +15,7 @@ const App: React.FC = () => {
         <div className={styles.left}>
           <div className={styles.top}></div>
           <div className={styles.bottom}>
-            <Home />
+            <CalendarScreen />
           </div>
         </div>
         <div className={styles.right}></div>

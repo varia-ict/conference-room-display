@@ -2,7 +2,6 @@ import styles from './calendarButton.module.scss';
 import CalendarIcon from './calendar-icon.png';
 
 
-
 type CalendarButtonProps = {
   // pageName: translations
   onClick?: () => void

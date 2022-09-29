@@ -1,0 +1,54 @@
+.container {
+  background-color: grey;
+  height: 350px;
+  width: 20vw;
+}
+
+@mixin verticalPosition {
+  height: 350px;
+  position: absolute;
+}
+
+.line {
+  @include verticalPosition();
+  background-color: black;
+  width: 4px;
+  left: 30px;
+}
+
+.items {
+  @include verticalPosition();
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.container .items .item {
+  display: flex;
+  flex-direction: row;
+  padding-left: 22px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.container .items .item .ball {
+  height: 15px;
+  width: 15px;
+  background: var(--ball-color);
+  border-radius: 100%;
+}
+
+.container .items .item .info {
+  background: var(--info-color);
+  width: 100px;
+  height: 40px;
+  border-radius: 15px;
+  margin: 0 10px;
+  transform: translateY(-10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

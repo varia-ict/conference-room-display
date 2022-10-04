@@ -1,3 +1,39 @@
 body {
   margin: 0;
 }
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  background: #13233E;
+}
+
+.container .background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height:100%;
+  width:100%;
+  background-image:url('./images/backgroundimage.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container .left {
+  width:50%;
+}
+
+.container .right{
+  width:50%;
+}
+
+.container .left .top{
+  height:50%;
+}
+
+.container .left .bottom{
+  height:50%;
+}

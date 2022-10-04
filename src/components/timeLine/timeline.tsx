@@ -2,6 +2,7 @@ import React, { CSSProperties } from 'react'
 import styles from './timeline.module.scss'
 
 type TimelineProps = {
+  customStyle?: string;
 }
 
 export interface IReservation {
@@ -28,7 +29,7 @@ const reservations: IReservation[] = [
   }
 ]
 
-const Timeline: React.FC<TimelineProps> = () => {
+const Timeline: React.FC<TimelineProps> = (customStyle) => {
   return (
     <div className={styles.container}>
       <div className={styles.line} />

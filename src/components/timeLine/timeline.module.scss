@@ -1,36 +1,43 @@
 .container {
-  background-color: grey;
-  height: 350px;
-  width: 20vw;
+  //background-color: grey;
+  position: relative;
+  height: 100vh;
+  width: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
 }
 
 @mixin verticalPosition {
-  height: 350px;
+  height: 90vh;
   position: absolute;
 }
 
-.line {
+.container .line {
   @include verticalPosition();
   background-color: black;
   width: 4px;
   left: 30px;
+  
 }
 
-.items {
+.container .items {
   @include verticalPosition();
-  margin: 10px 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  
 }
 
 .container .items .item {
   display: flex;
   flex-direction: row;
-  padding-left: 22px;
+  padding-left: 25px;
   width: 100%;
   margin: 10px 0;
+  
 }
 
 .container .items .item .ball {
@@ -38,6 +45,7 @@
   width: 15px;
   background: var(--ball-color);
   border-radius: 100%;
+
 }
 
 .container .items .item .info {
@@ -51,4 +59,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }

@@ -3,54 +3,37 @@ body {
 }
 
 .container {
-  // position: relative;
-  width: 100vw;
   height: 100vh;
-  background-color: #12223E;
-}
-
-.content {
+  width: 100vw;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: row;
-  position: relative;
-  height: 100vh;
-  width: 100vw;
+  background: #13233E;
 }
 
-.background {
+.container .background{
   position: absolute;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-image: url('./images/varialogo.png');
+  top: 0;
+  left: 0;
+  height:100%;
+  width:100%;
+  background-image:url('./images/backgroundimage.png');
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
-  opacity: 0.6;
 }
 
-.container .content .left {
-  height: 100%;
-  width: 50%;
+.container .left {
+  width:50%;
 }
 
-.container .content .right {
-  height: 100%;
-  width: 50%;
+.container .right{
+  width:50%;
 }
 
-.container .content .left .top {
-  height: 50%;
-  width: 100%;
+.container .left .top{
+  height:50%;
 }
 
-.container .content .left .bottom {
-  height: 50%;
-  width: 100%;
+.container .left .bottom{
+  height:50%;
 }

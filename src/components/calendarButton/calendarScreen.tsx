@@ -3,10 +3,11 @@ import React, { useState } from 'react'
 import styles from './calendarScreen.module.scss';
 import Modal from 'react-modal';
 
+
 type HomeProps = {
 
 }
-
+//when the calendarButton is pushed calendarScreen is open
 const CalendarScreen: React.FC<HomeProps> = () => {
     const [date] = useState(new Date());
     const [displayCalendar, setDisplayCalendar] = useState(false);
@@ -27,7 +28,7 @@ const CalendarScreen: React.FC<HomeProps> = () => {
                    
                 </Modal>
             </div>
-            <div>{displayCalendar ? 'true' : 'false'}</div>
+            {/* <div>{displayCalendar ? 'true' : 'false'}</div> */}
             <div >
                 <CalendarButton onClick={() => setIsOpen(true)} />
             </div>

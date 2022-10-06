@@ -1,0 +1,20 @@
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 90px;
+    line-height: 2.5;
+}
+
+.isGreen {
+     background: rgba(2, 208, 19, 0.9);
+}
+
+.isRed {
+    background: rgba(239, 0, 0, 0.9);
+}

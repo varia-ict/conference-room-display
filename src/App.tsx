@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './app.module.scss';
+import Luokkanimi from './components/luokkanimi/luokkanimi';
 
 const App: React.FC = () => {
   return (
@@ -9,7 +10,9 @@ const App: React.FC = () => {
       <div className={styles.content}>
         <div className={styles.left}>
           <div className={styles.top}></div>
-          <div className={styles.bottom}></div>
+          <div className={styles.bottom}>
+            <Luokkanimi luokanNimi='Luokka 123'/>
+          </div>
         </div>
         <div className={styles.right}></div>
       </div>

@@ -7,7 +7,7 @@ type TuntiInfoProps = {
   endTime?: number
 }
 
-const TuntiInfo: React.FC<TuntiInfoProps> = ({ infoText = "vapaa", startTime, endTime }) => {
+const TuntiInfo: React.FC<TuntiInfoProps> = ({ infoText, startTime, endTime }) => {
   const onVapaa = startTime === undefined && endTime === undefined
   return (
     <div className={`${styles.container} ${onVapaa ? styles.isGreen : styles.isRed}`}>

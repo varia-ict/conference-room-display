@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from './app.module.scss';
 import Luokkanimi from './components/luokkanimi/luokkanimi';
+import Timeline from './components/timeLine/timeline';
 
 const App: React.FC = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.background}>
-      </div>
+      <div className={styles.background} />
       <div className={styles.content}>
         <div className={styles.left}>
           <div className={styles.top}></div>
@@ -14,7 +14,9 @@ const App: React.FC = () => {
             <Luokkanimi luokanNimi='Luokka 123'/>
           </div>
         </div>
-        <div className={styles.right}></div>
+        <div className={styles.right}>
+          <Timeline />
+        </div>
       </div>
     </div>
   )

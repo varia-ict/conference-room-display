@@ -43,6 +43,10 @@ body {
 .container .content .right {
   height: 100%;
   width: 50%;
+  // display: flex;
+  // flex-direction: row;
+  // align-items: flex-end;
+  // justify-content: flex-end;
 }
 
 .container .content .left .top {
@@ -58,8 +62,4 @@ body {
   align-items: flex-start;
   justify-content: center;
   padding-left: 10px;
-}
-
-.container .content .right .timeline {
-  margin-left: 350px;
 }

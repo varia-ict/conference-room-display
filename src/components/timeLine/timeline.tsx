@@ -1,4 +1,5 @@
 import React, { CSSProperties } from 'react'
+import TuntiInfo from '../tuntiInfo/tuntiInfo';
 import styles from './timeline.module.scss'
 
 type TimelineProps = {
@@ -49,9 +50,10 @@ const Timeline: React.FC<TimelineProps> = (customStyle) => {
               >
                 <div className={styles.ball}></div>
                 <div className={styles.info}>
-                  {
+                  <TuntiInfo infoText='lorem ipsum asdasdasdas asdasdasd' />
+                  {/* {
                     free ? 'FREE' : 'NOT FREE'
-                  }
+                  } */}
                 </div>
               </div>
             )

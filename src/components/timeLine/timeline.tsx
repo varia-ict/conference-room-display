@@ -16,7 +16,7 @@ export interface IReservation {
 const reservations: IReservation[] = [
   {
     id: 1,
-    name: 'opetus',
+    name: ' Luokkatunnus Opettajan nimi asdasdaasdasadsa adsasd',
     startTime: 1664266619370,
     endTime: 1664266629370
   },
@@ -27,7 +27,13 @@ const reservations: IReservation[] = [
   {
     id: 3,
     name: ''
-  }
+  },
+  {
+    id: 2,
+    name: 'asd Luokkatunnus Opettajan nimi asdasdaasdasadsa adsasd',
+    startTime: 1664266619370,
+    endTime: 1664266629370
+  },
 ]
 
 const Timeline: React.FC<TimelineProps> = (customStyle) => {
@@ -50,7 +56,7 @@ const Timeline: React.FC<TimelineProps> = (customStyle) => {
               >
                 <div className={styles.ball}></div>
                 <div className={styles.info}>
-                  <TuntiInfo infoText='lorem ipsum asdasdasdas asdasdasd' />
+                  <TuntiInfo startTime={x.startTime} endTime={x.endTime} infoText={x.name} />
                   {/* {
                     free ? 'FREE' : 'NOT FREE'
                   } */}

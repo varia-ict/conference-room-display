@@ -12,13 +12,16 @@ const TuntiInfo: React.FC<TuntiInfoProps> = ({ infoText, startTime, endTime }) =
   return (
     <div className={`${styles.container} ${onVapaa ? styles.isGreen : styles.isRed}`}>
       {
-        startTime && endTime
+        startTime && endTime 
           ? (
-            <div>{new Date(startTime).toLocaleTimeString()} - {new Date(endTime).toLocaleTimeString()}</div>
+            <div>{new Date(startTime).toLocaleTimeString().replace(/.\d+Z$/g, "Z")} - {new Date(endTime).toLocaleTimeString()}</div>
           )
           : null
       }
-      <div>{infoText}</div>
+      <div className={styles.infotext}>
+        <p>{startTime} - {endTime}</p>
+        <p>{infoText}</p>
+      </div>
     </div>
   )
 }

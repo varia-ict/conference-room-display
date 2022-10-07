@@ -2,7 +2,7 @@ import CalendarButton from './calendarButton';
 import React, { useState } from 'react'
 import styles from './calendarScreen.module.scss';
 import Modal from 'react-modal';
-пше
+
 
 type HomeProps = {
 
@@ -17,7 +17,7 @@ const CalendarScreen: React.FC<HomeProps> = () => {
 
     return (
         <div>
-            <div className={displayCalendar ? styles.on : ""} id={styles.overlay} onClick={() => setDisplayCalendar(!displayCalendar)}>
+            <div className={displayCalendar ? styles.on : ""} id={styles.overlay} /*onClick={() => setDisplayCalendar(!displayCalendar)}*/>
 
                 <Modal
                     isOpen={IsOpen}

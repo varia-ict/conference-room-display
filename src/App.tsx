@@ -4,6 +4,7 @@ import styles from './app.module.scss';
 //import DateTime from './components/dateTime/dateTime';
 
 import RoomComponent from './components/huoneNo/roomNo';
+import DateTime from './components/timeDate/timeDate';
 
 const App: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const App: React.FC = () => {
       <div className={styles.background} />
       <div className={styles.left}>
         <div className={styles.top}>
+          <DateTime/>
         </div>
         <div className={styles.bottom}>
           <RoomComponent/>

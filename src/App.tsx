@@ -13,6 +13,7 @@ const App: React.FC = () => {
         <div className={styles.top}>
         </div>
         <div className={styles.bottom}>
+          <RoomComponent/>
         </div>
       </div>
       <div className={styles.right}>

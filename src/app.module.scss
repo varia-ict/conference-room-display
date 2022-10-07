@@ -20,14 +20,17 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  z-index: 100;
 }
 
 .container .left {
   width:50%;
+  z-index: 200;
 }
 
 .container .right{
   width:50%;
+  z-index: 200;
 }
 
 .container .left .top{

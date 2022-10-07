@@ -1,5 +1,9 @@
 import React from 'react'
+
 import styles from './app.module.scss';
+//import DateTime from './components/dateTime/dateTime';
+
+import RoomComponent from './components/huoneNo/roomNo';
 
 const App: React.FC = () => {
   return (
@@ -13,8 +17,10 @@ const App: React.FC = () => {
       </div>
       <div className={styles.right}>
       </div>
+
     </div>
   )
 }
+
 
 export default App

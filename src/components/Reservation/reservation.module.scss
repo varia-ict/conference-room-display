@@ -11,6 +11,7 @@
 .container {
     height: 350px;
     width: 100vw;
+    
   }
   
   @mixin verticalPosition {
@@ -22,7 +23,7 @@
     @include verticalPosition();
     background-color: lightgrey;
     width: 4px;
-    left: 38px;
+    left: 1018px;
   }
   
   .items {
@@ -37,7 +38,7 @@
 .container .items .item {
     display: flex;
     flex-direction: row;
-    padding-left: 22px;
+    padding-left: 1010px;
     width: 100%;
     margin: 10px 0;
   }

@@ -4,6 +4,7 @@ import styles from './app.module.scss';
 //import DateTime from './components/dateTime/dateTime';
 
 import RoomComponent from './components/huoneNo/roomNo';
+import Timeline from './components/Reservation/reservation';
 import DateTime from './components/timeDate/timeDate';
 
 const App: React.FC = () => {
@@ -19,6 +20,7 @@ const App: React.FC = () => {
         </div>
       </div>
       <div className={styles.right}>
+        <Timeline/>
       </div>
 
     </div>

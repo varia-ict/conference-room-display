@@ -28,7 +28,6 @@ const CalendarScreen: React.FC<HomeProps> = () => {
                    
                 </Modal>
             </div>
-            {/* <div>{displayCalendar ? 'true' : 'false'}</div> */}
             <div >
                 <CalendarButton onClick={() => setIsOpen(true)} />
             </div>

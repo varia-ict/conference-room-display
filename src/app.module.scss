@@ -7,7 +7,14 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: row;
+<<<<<<< HEAD
   background: #13233E;
+=======
+  position: relative;
+  
+  height: 100vh;
+  width: 100vw;
+>>>>>>> Golysh/reservation
 }
 
 .container .background{
@@ -23,9 +30,15 @@ body {
   z-index: 100;
 }
 
+<<<<<<< HEAD
 .container .left {
   width:50%;
   z-index: 200;
+=======
+.container .content .right {
+  height: 100%;
+  width: 50%;
+>>>>>>> Golysh/reservation
 }
 
 .container .right{
@@ -37,6 +50,14 @@ body {
   height:50%;
 }
 
+<<<<<<< HEAD
 .container .left .bottom{
   height:50%;
 }
+=======
+.container .content .left .bottom {
+  height: 50%;
+  width: 100%;
+}
+
+>>>>>>> Golysh/reservation

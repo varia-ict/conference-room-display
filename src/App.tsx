@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './app.module.scss';
 import Luokkanimi from './components/luokkanimi/luokkanimi';
 import Timeline from './components/timeLine/timeline';
+import './app.scss';
 
 const App: React.FC = () => {
   return (

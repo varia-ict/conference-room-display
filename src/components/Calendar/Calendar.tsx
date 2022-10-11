@@ -8,13 +8,14 @@ import CalendarLogo from './logo.png'
 import { Button } from 'antd'
 import * as CSS from 'csstype'
 import { useModalContext } from '@rintsin/common-components'
+import CalendarButton from '../calendarButton/calendarButton'
 
 
 function Calendar() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const calendarRef: any = useRef()
 
-  const [startDate, setStartDate] = useState<Date | null>(null)
+  const [startDate, setStartDate] = useState<Date | null> (null)
 
   const onDatePickerChange = (date: Date) => {
     setStartDate(date)
@@ -23,31 +24,15 @@ function Calendar() {
 
   const { modal } = useModalContext()
 
-  const openModal = modal(({
-    content: <CalendarDisplay calendarRef={calendarRef} />
-  }))
+  const openModal = () => {
+    modal((
+      {
+        content: <CalendarDisplay calendarRef={calendarRef} />
+      }))
+  }
 
-  return (
-    <Wrapper className='demo-app'>
-      {!startDate && (
-        <DatePicker
-          selected={startDate}
-          onChange={onDatePickerChange}
-          locale={'en'}
-          customInput={<img src={CalendarLogo} alt={'calendar-logo'} style={{ width: 48 }} />}
-        />
-      )}
-
-      <CalendarWrapper visible={startDate ? 'visible' : 'hidden'}>
-        <div className={'button-wrapper'}>
-          <Button type={'primary'} onClick={() => setStartDate(null)} size={'large'}>
-            <CloseOutlined />
-          </Button>
-        </div>
-        {/* <CalendarDisplay calendarRef={calendarRef} /> */}
-      </CalendarWrapper>
-    </Wrapper>
-  )
+  return <CalendarButton onClick={openModal} />
+  
 }
 
 const Wrapper = styled('div')({

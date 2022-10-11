@@ -1,3 +1,4 @@
+import { time } from 'console'
 import React from 'react'
 import styles from './tuntiInfo.module.scss'
 
@@ -12,13 +13,15 @@ const TuntiInfo: React.FC<TuntiInfoProps> = ({ infoText, startTime, endTime }) =
   return (
     <div className={`${styles.container} ${onVapaa ? styles.isGreen : styles.isRed}`}>
       {
-        startTime && endTime
-          ? (
-            <div>{new Date(startTime).toLocaleTimeString()} - {new Date(endTime).toLocaleTimeString()}</div>
-          )
+        startTime && endTime 
+          ? <div>
+              {new Date(startTime).toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})} - {new Date(endTime).toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}
+            </div>
           : null
       }
-      <div>{infoText}</div>
+      <div className={styles.infotext}>
+        <p>{infoText}</p>
+      </div>
     </div>
   )
 }

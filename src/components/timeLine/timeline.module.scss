@@ -50,9 +50,10 @@
 }
 
 .container .items .item .info {
-  background: var(--info-color);
-  width: 100px;
-  height: 40px;
+  // background: var(--info-color);
+  max-width: 250px;
+  padding: 10px;
+  height: 20px;
   border-radius: 15px;
   margin: 0 10px;
   transform: translateY(-10px);

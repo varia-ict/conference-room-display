@@ -1,0 +1,176 @@
+import { useEffect, useState } from 'react';
+import styles from './calendar.module.scss'
+
+
+
+function ClassInfo() {
+
+
+  //const classData = [classNumber, classSubject, classTeacher, classCode, classStartTime, classEndTime, classState];
+
+  const classFreeText = <li>Vapaa</li>;
+
+
+  const classFree = (
+
+    <div className={styles.slot + ' ' + styles.slot1 + ' ' + styles.slotfree}>
+      <span>
+        {classFreeText}
+      </span>
+    </div>
+
+  );
+
+  //const classInfoText = <li> {classStartTime + '-' + classEndTime} Luokka {classNumber + '\n'} {classSubject + '\n'} {classTeacher + '\n'} {classCode} </li>;
+
+
+
+  const classNotFree = (
+
+    <div className={styles.slot + ' ' + styles.slot1}>
+      <div className={styles.event_status}>
+        <span>
+          { }
+        </span>
+      </div>
+    </div>
+
+    //return classState === true ? classFree : classNotFree;
+  )
+}
+
+export interface ClassInfoInterface {
+
+  classNumber: string;
+  classSubject: string;
+  classTeacher: string;
+  classCode: string;
+  classStartTime: string;
+  classEndTime: string;
+  classFree: boolean;
+
+}
+
+export interface AllClassesInfoInterface {
+
+  currentClassInfo: ClassInfoInterface;
+  allClassesInfo: Array<ClassInfoInterface>;
+
+}
+
+
+export function Calendar(allClassesInfo: AllClassesInfoInterface ) {
+
+
+  //console.log(Date())
+
+  const [classInfo, setClassInfo] = useState<AllClassesInfoInterface>({
+
+    currentClassInfo: {
+
+      classNumber: '',
+      classSubject: '',
+      classTeacher: '',
+      classCode: '',
+      classStartTime: '',
+      classEndTime: '',
+      classFree: false
+    },
+    allClassesInfo: []
+
+  });
+
+  useEffect(() => {
+    setClassInfo({
+      currentClassInfo: {
+        classNumber: '',
+        classSubject: '',
+        classTeacher: '',
+        classCode: '',
+        classStartTime: '',
+        classEndTime: '',
+        classFree: false
+      },
+      allClassesInfo: [
+        ...classInfo.allClassesInfo,
+        classInfo.currentClassInfo
+      ]
+    })
+  }, [])
+
+
+  function allClasses() {
+
+    console.log(classInfo.allClassesInfo);
+    
+    const allClassesMapped = (classInfo.allClassesInfo.map((c, i) => {
+      <div key={i} className={styles.slot + ' ' + styles.slot1}>
+        <div className={styles.event_status}>
+          <span>
+            <li>{c.classNumber + c.classSubject + c.classTeacher + c.classCode + c.classStartTime + c.classEndTime + c.classFree}</li>
+          </span>
+        </div>
+      </div>
+    }))
+
+    return allClassesMapped;
+
+  }
+
+  console.log(allClasses());
+
+
+
+  const calendar = (
+
+    <div className={styles.container}>
+      <div className={styles.calendar_container}>
+
+        <div className={styles.header}>
+          <ul className={styles.weekdays}>
+            <li>Maanantai</li>
+            <li>Tiistai</li>
+            <li>Keskiviikko</li>
+            <li>Torstai</li>
+            <li>Perjantai</li>
+            <li>Lauantai</li>
+            <li>Sunnuntai</li>
+          </ul>
+
+          <ul className={styles.daynumbers}>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+          </ul>
+        </div>
+
+        <div className={styles.timeslots_container}>
+          <ul className={styles.timeslots}>
+            <li>8:00</li>
+            <li>9:00</li>
+            <li>10:00</li>
+            <li>11:00</li>
+            <li>12:00</li>
+            <li>13:00</li>
+            <li>14:00</li>
+            <li>15:00</li>
+            <li>16:00</li>
+          </ul>
+        </div>
+
+        <div className={styles.event_container}>
+          {}
+        </div>
+      </div>
+    </div>
+  );
+
+  return <div>{calendar}</div>;
+
+}
+
+export default Calendar;

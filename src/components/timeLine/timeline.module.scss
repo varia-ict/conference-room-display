@@ -17,8 +17,20 @@
   @include verticalPosition();
   background-color: rgb(4, 83, 120);
   width: 4px;
-  right: 50%;
-  
+  left: 50%;
+
+  @media only screen and (max-width: 800px) {
+    left: 40%;
+  }
+
+  @media only screen and (max-width: 666px) {
+    left: 20%;
+  }
+
+  @media only screen and (max-width: 573px) {
+    left: 10%;
+  }
+
 }
 
 .container .items {
@@ -29,6 +41,18 @@
   justify-content: space-around;
   left: 50%;
   margin-left: -10px;
+
+  @media only screen and (max-width: 800px) {
+    left: 40%;
+  }
+
+  @media only screen and (max-width: 666px) {
+    left: 20%;
+  }
+
+  @media only screen and (max-width: 573px) {
+    left: 10%;
+  }
 }
 
 .container .items .item {
@@ -38,12 +62,12 @@
   // padding-left: 25px;
   width: 100%;
   margin: 10px 0;
-  
+
 }
 
 .container .items .item .ball {
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
   background: var(--ball-color);
   border-radius: 100%;
 
@@ -60,5 +84,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }

@@ -7,13 +7,14 @@ import './app.scss';
 import CalendarButton from './components/calendarButton/calendarButton';
 import Calendar from './components/calendar/Calendar';
 import { useModalContext } from '@rintsin/common-components'
+import VapaaIndikaattori from './components/vapaanappi/vapaaIndikaattori';
 
 const App: React.FC = () => {
 
   const { modal } = useModalContext()
   const displayModal = () => modal({
     content: (
-      <div style={{height: '600px', width: '600px', position: 'relative'}}>
+      <div style={{ height: '600px', width: '600px', position: 'relative' }}>
         <Calendar props={{
           currentClass: {
             classNumber: '5353',
@@ -30,24 +31,29 @@ const App: React.FC = () => {
     )
   })
   return (
-    <div className={styles.container}>
-      <div className={styles.background} />
-      <div className={styles.content}>
-
-        <div className={styles.left}>
-          <div className={styles.top}>
-            <TimeDate />
-          </div>
-          <div className={styles.bottom}>
-            <Luokkanimi luokanNimi='Luokka 123' />
-            <div onClick={displayModal}>
-              <CalendarButton />
+    <div className={styles.cont}>
+      <div className={styles.container}>
+        <div className={styles.background}>
+        </div>
+        <div className={styles.content}>
+          <div className={styles.left}>
+            <div className={styles.top}>
+              <TimeDate />
+            </div>
+            <div className={styles.bottom}>
+              <Luokkanimi luokanNimi='Luokka 123' />
+              <div onClick={displayModal}>
+                <CalendarButton />
+              </div>
             </div>
           </div>
+          <div className={styles.right}>
+            <Timeline />
+          </div>
         </div>
-        <div className={styles.right}>
-          <Timeline />
-        </div>
+      </div>
+      <div className={styles.containerBottom}>
+        <VapaaIndikaattori onVapaa={false} />
       </div>
     </div>
   )

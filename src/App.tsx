@@ -20,6 +20,7 @@ const App: React.FC = () => {
             <DateTime />
           </div>
           <div className={styles.bottom}>
+            <Calendar />
             <RoomComponent />
           </div>
         </div>

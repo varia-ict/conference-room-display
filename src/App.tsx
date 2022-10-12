@@ -15,17 +15,17 @@ const App: React.FC = () => {
         <div className={styles.background} />
         <div className={styles.left}>
           <div className={styles.top}>
-            <DateTime/>
+            <DateTime />
           </div>
           <div className={styles.bottom}>
-            <RoomComponent/>
-            </div>
-            </div>
-            <div className={styles.right}>
-            <Timeline/>
-            </div>
-            </div>
-            <RoomStatus />
+            <RoomComponent />
+          </div>
+        </div>
+        <div className={styles.right}>
+          <Timeline />
+        </div>
+      </div>
+      <RoomStatus />
     </div>
   )
 }

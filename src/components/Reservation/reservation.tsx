@@ -16,8 +16,8 @@ const reservations: IReservation[] = [
   {
     id: 1,
     name: 'opetus',
-    startTime: 1664266619370,
-    endTime: 1664266629370
+    //startTime: 1664266619370,
+    //endTime: 1664266629370
   },
   {
     id: 2,
@@ -26,7 +26,20 @@ const reservations: IReservation[] = [
   {
     id: 3,
     name: ''
+  },
+  {
+    id: 4,
+    name: ''
+  },
+  {
+    id: 5,
+    name: ''
+  },
+  {
+    id: 6,
+    name: ''
   }
+
 ]
 
 const Timeline: React.FC<TimelineProps> = () => {

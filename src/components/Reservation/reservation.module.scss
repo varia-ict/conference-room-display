@@ -8,11 +8,11 @@
 //     color: white;
 // }
 
-.container {
+/*.container {
     height: 350px;
     width: 100vw;
     
-  }
+  }*/ 
   
   @mixin verticalPosition {
     height: 350px;
@@ -22,13 +22,15 @@
   .line {
     @include verticalPosition();
     background-color: lightgrey;
-    width: 4px;
-    left: 1018px;
+    width: 8px;
+    left: 1016px;
+    margin: 35px 0;
+    height: 580px;
   }
   
   .items {
     @include verticalPosition();
-    margin: 10px 0;
+    margin: 165px 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -38,7 +40,7 @@
 .container .items .item {
     display: flex;
     flex-direction: row;
-    padding-left: 1010px;
+    padding-left: 290px;
     width: 100%;
     margin: 10px 0;
   }
@@ -52,8 +54,8 @@
   
   .container .items .item .info {
     background: var(--info-color);
-    width: 300px;
-    height: 50px;
+    width: 350px;
+    height: 70px;
     border-radius: 2px;
     margin: 0 10px;
     transform: translateY(-10px);

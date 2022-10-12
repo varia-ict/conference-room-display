@@ -35,9 +35,9 @@
   height: 100%;
   width: 50%;
 
-  @media only screen and (max-width: 666px) {
-    width: 45%;
-}
+//   @media only screen and (max-width: 666px) {
+//     width: 45%;
+// }
 }
 
 .container .content .right {
@@ -47,9 +47,9 @@
   // flex-direction: row;
   // align-items: flex-end;
   // justify-content: flex-end;
-  @media only screen and (max-width: 666px) {
-    width: 55%;
-  }
+  // @media only screen and (max-width: 666px) {
+  //   width: 55%;
+  // }
 }
 
 .container .content .left .top {

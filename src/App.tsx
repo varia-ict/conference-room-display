@@ -9,7 +9,7 @@ import DateTime from './components/timeDate/timeDate';
 const App: React.FC = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.background} />
+      '<div className={styles.background} />
       <div className={styles.left}>
         <div className={styles.top}>
           <DateTime/>

@@ -65,6 +65,8 @@ function CalendarDisplay({ calendarRef }: CalendarProps) {
         initialEvents={INITIAL_EVENTS}
         locales={allLocales}
         locale='fi-FI'
+        slotMinTime="07:00:00"
+        slotMaxTime={"18:00:00"}
         // eventsSet={handleEvents}
         // select={handleDateSelect}
         // eventClick={handleEventClick}

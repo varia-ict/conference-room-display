@@ -16,7 +16,7 @@ const RoomStatus: React.FC<RoomStatusProps> = () => {
     
     
     <div style={{zIndex: 500}}>
-      <div className={state ? styles.toggleOpen : styles.toggleClose} onClick={toggle}  >
+      <div className={state ? styles.toggleOpen : styles.toggleClose} /*onClick={toggle}*/  >
       {state ? "Vapaa" : "Varattu"}
        
        </div>

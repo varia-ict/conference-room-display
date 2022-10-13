@@ -44,7 +44,7 @@ const Wrapper = styled('div')({
 })
 
 interface CalendarWrapperProps {
-  visible: CSS.Property.Visibility
+  visible: 'visible' | 'hidden'
 }
 
 const CalendarWrapper = styled('div')({}, ({ visible }: CalendarWrapperProps) => ({

@@ -1,22 +1,24 @@
 
 
 .toggleOpen {
-  font-size: 3em;
+  font-size: 5em;
   color: white;
   background-color: rgb(11, 140, 22);
   padding: 20px;
-  font-style: Serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 900;
   text-align: center;
   letter-spacing: .3em;
   z-index: 500;
 }
 
 .toggleClose {
-  font-size: 3em;
+  font-size: 5em;
   color: white;
   background-color: rgb(140, 11, 11);
   padding: 20px;
-  font-style: Serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 900;
   text-align: center;
   letter-spacing: 0.3em;
   z-index: 500;

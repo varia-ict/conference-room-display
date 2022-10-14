@@ -41,22 +41,22 @@ const reservations: IReservation[] = [
     id: 4,
     name: '',
     summary: 'class 4',
-    startTime: 1665747120000,
-    endTime: 1665747180000
+    startTime: 1665748140000,
+    endTime: 1665748260000
   },
   {
     id: 5,
     name: '',
     summary: 'class 5',
-    startTime: 1665747120000,
-    endTime: 1665747180000
+    startTime: 1665748560000,
+    endTime: 1665748680000
   },
   {
     id: 6,
     name: '',
     summary: 'class 6',
-    startTime: 1665747120000,
-    endTime: 1665747180000
+    startTime: 1665748560000,
+    endTime: 1665748680000
   }
 
 ]

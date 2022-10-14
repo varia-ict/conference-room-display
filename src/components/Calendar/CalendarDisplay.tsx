@@ -67,6 +67,7 @@ function CalendarDisplay({ calendarRef }: CalendarProps) {
         locale='fi-FI'
         slotMinTime={"07:00:00"}
         slotMaxTime={"18:00:00"}
+        height={"auto"}
         // eventsSet={handleEvents}
         // select={handleDateSelect}
         // eventClick={handleEventClick}

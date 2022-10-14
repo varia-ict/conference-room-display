@@ -21,7 +21,7 @@
   
   .line {
     @include verticalPosition();
-    background-color: lightgrey;
+    background-color: rgb(231, 70, 70);
     width: 8px;
     left: 1016px;
     margin: 35px 0;
@@ -55,7 +55,7 @@
   }
   
   .container .items .item .info {
-    background: var(--info-color);
+    background: rgb(233, 60, 60);
     width: 350px;
     height: 70px;
     border-radius: 2px;
@@ -63,6 +63,19 @@
     transform: translateY(-10px);
   
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .container .items .item .info.old {
+    background: rgb(163, 44, 44);
+  }
+  .container .items .item .info.now {
+    background: rgb(231, 70, 70);
+    font-weight: 900;
+    height: 100px;
+  }
+  .container .items .item .info.next {
+    background: rgb(238, 152, 152);
   }

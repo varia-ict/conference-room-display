@@ -10,8 +10,8 @@ const VapaaIndikaattori: React.FC<VapaaIndikaattoriProps> = ({ onVapaa }) => {
     <div style={{background: onVapaa ? "green" : "red" }} className={styles.container}>
       {
         onVapaa
-          ? "vapaa"
-          : "varattu"
+          ? "Käytössä"
+          : "Ei käytössä"
       }
     </div>
   )

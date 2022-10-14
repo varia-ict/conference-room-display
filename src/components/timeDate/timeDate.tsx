@@ -22,7 +22,7 @@ function TimeDate(): JSX.Element {
   return (
     <div className={styles.container}>
       <h1> {ctime} </h1>
-      <h1> {cdate} </h1>   
+      <h2> {cdate} </h2>   
     </div>
   );
 };

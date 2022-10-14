@@ -2,6 +2,7 @@
 .container {
     overflow: hidden;
     border-radius: 10px;
+    background: rgba(197, 50, 50, 0.64);
     // LENGTH
     width: 100%;
     height: 100%;
@@ -30,12 +31,22 @@
 
 }
 
-.isGreen {
-     background: rgba(2, 208, 19, 0.9);
-     height: 10px;
-     width: 350px;
+.old {
+    background: rgba(154, 15, 15, 0.64);
 }
+.now {
+    background: rgba(197, 50, 50, 0.64);
+    font-weight: 900;
+}
+.upcoming {
+    background: rgba(219, 116, 116, 0.64);
+}
+// .isGreen {
+//      background: rgba(2, 208, 19, 0.9);
+//      height: 10px;
+//      width: 350px;
+// }
 
-.isRed {
-    background: rgba(204, 108, 108, 0.64);
-}
+// .isRed {
+//     background: rgba(204, 108, 108, 0.64);
+// }

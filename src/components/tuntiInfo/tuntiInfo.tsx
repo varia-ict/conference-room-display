@@ -1,17 +1,23 @@
 import { time } from 'console'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './tuntiInfo.module.scss'
 
 type TuntiInfoProps = {
   infoText?: string
-  startTime?: number
-  endTime?: number
+  startTime: number
+  endTime: number
 }
 
 const TuntiInfo: React.FC<TuntiInfoProps> = ({ infoText, startTime, endTime }) => {
-  const onVapaa = startTime === undefined && endTime === undefined
+  var [date, setDate] = useState(new Date().getTime());
+
+  useEffect(() => {
+    var timer = setInterval(() => setDate(new Date().getTime()), 1000)
+    return function cleanup() { clearInterval(timer) }
+  });
+  
   return (
-    <div className={`${styles.container} ${onVapaa ? styles.isGreen : styles.isRed}`}>
+    <div className={`${styles.container} ${getColor(date, startTime, endTime)}`}>
       {
         startTime && endTime 
           ? <div>
@@ -24,6 +30,16 @@ const TuntiInfo: React.FC<TuntiInfoProps> = ({ infoText, startTime, endTime }) =
       </div>
     </div>
   )
+}
+
+// FUNCTIONS
+
+const msToTime = (millisecond: number): string => new Date(millisecond).toLocaleTimeString('fi-FI', {hour: '2-digit', minute: '2-digit'})
+
+const getColor = (date: number, startDate: number, endDate: number): string => {
+  if(startDate > date) return styles.upcoming
+  if(endDate < date) return styles.old
+  return styles.now
 }
 
 export default TuntiInfo

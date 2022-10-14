@@ -2,58 +2,59 @@ import React, { CSSProperties } from 'react'
 import TuntiInfo from '../tuntiInfo/tuntiInfo';
 import styles from './timeline.module.scss'
 
-type TimelineProps = {
-}
-
 export interface IReservation {
   id: number;
-  name: string;
-  startTime?: number;
-  endTime?: number;
+  infoText: string;
+  startTime: number;
+  endTime: number;
 }
 
 const reservations: IReservation[] = [
   {
     id: 1,
-    name: ' Luokkatunnus Opettajan nimi asdasdaasdasadsa adsasd',
-    startTime: 1664266619370,
-    endTime: 1664266629370
+    infoText: ' Luokkatunnus Opettajan nimi asdasdaasdasadsa adsasd',
+    startTime: 1665443416508,
+    endTime: 1665743416508
+
   },
   {
     id: 2,
-    name: 'asd Luokkatunnus Opettajan nimi asdasdaasdasadsa adsasd',
-    startTime: 1664266619370,
-    endTime: 1664266629370
+    infoText: 'asd Luokkatunnus Opettajan nimi asdasdaasdasadsa adsasd',
+    startTime: 1665743416508,
+    endTime: 1665751916508
   },
   {
     id: 3,
-    name: 'asd Luokkatunnus Opettajan nimi asdasdaasdasadsa adsasd',
-    startTime: 1664266619370,
-    endTime: 1664266629370
+    infoText: 'asd Luokkatunnus Opettajan nimi asdasdaasdasadsa adsasd',
+    startTime: 1665751916508,
+    endTime: 1665756916508
   },
 ]
 
-const Timeline: React.FC<TimelineProps> = () => {
+type TimelineProps = {
+  Ireservations: IReservation[]
+}
+const Timeline: React.FC<TimelineProps> = ({Ireservations = reservations}) => {
   return (
     <div className={styles.container}>
       <div className={styles.line} />
       <div className={styles.items}>
         {
           reservations.map(x => {
-            const free = !x.startTime && !x.endTime;
+            // const free = !x.startTime && !x.endTime;
             return (
               <div
                 key={x.id}
                 className={styles.item}
-                style={
-                  {
-                    '--ball-color': free ? '#00b6ff' : '#00b6ff',
-                    '--info-color': free ? '#90EE90' : '#f54242',
-                  } as CSSProperties}
+                // style={
+                  // {
+                  //   '--ball-color': free ? '#00b6ff' : '#00b6ff',
+                  //   '--info-color': free ? '#90EE90' : '#f54242',
+                  // } as CSSProperties}
               >
                 <div className={styles.ball}></div>
                 <div className={styles.info}>
-                  <TuntiInfo startTime={x.startTime} endTime={x.endTime} infoText={x.name} />
+                  <TuntiInfo startTime={x.startTime} endTime={x.endTime} infoText={x.infoText} />
                 </div>
               </div>
             )

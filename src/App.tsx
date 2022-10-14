@@ -48,7 +48,7 @@ const App: React.FC = () => {
             </div>
           </div>
           <div className={styles.right}>
-            <Timeline />
+            <Timeline Ireservations={[]} />
           </div>
         </div>
       </div>
